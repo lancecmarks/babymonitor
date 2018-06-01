@@ -2,11 +2,13 @@
  * Example for using the Slack Web API.
  */
 
+// Setup environment secrets
+const dotenv = require('dotenv').config();
 const { WebClient } = require('@slack/client');
 
 // Get an API token by creating an app at <https://api.slack.com/apps?new_app=1>
 // It's always a good idea to keep sensitive data like the token outside your source code. Prefer environment variables.
-const token = process.env.SLACK_API_TOKEN || '';
+const token = process.env.SLACK_TOKEN || '';
 if (!token) { console.log('You must specify a token to use this example'); process.exitCode = 1; return; }
 
 // Initialize a Web API client
