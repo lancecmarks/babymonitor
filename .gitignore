@@ -7,3 +7,6 @@ examples/package-lock.json
 # nyc test coverage
 .nyc_output
 package-lock.json
+
+#environment variables
+.env
